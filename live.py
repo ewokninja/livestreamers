@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 import sys, json, requests; 
 #Only necessary to set default encoding in Python 2.* - doesn't work on Python 3.*
 try:
@@ -9,7 +10,7 @@ except Exception:
 headers = {
     'Accept': 'application/vnd.twitchtv.v5+json',
     'Client-ID': 'dsv0rf69bvzgi9ch6ys16vwncjax1z',
-    'Authorization': 'OAuth ***',
+    'Authorization': 'OAuth bptxc05i4aujoe3thuhrq10icfmnua',
 }
 
 response = requests.get('https://api.twitch.tv/kraken/streams/followed', headers=headers)
