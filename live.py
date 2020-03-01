@@ -1,16 +1,26 @@
 #!/usr/bin/env python2
-import sys, json, requests; 
-#Only necessary to set default encoding in Python 2.* - doesn't work on Python 3.*
+
+import os
+import sys 
+import json
+import requests
+from dotenv import load_dotenv
+
+# Only necessary to set default encoding in Python 2.* - doesn't work on Python 3.*
 try:
 	reload(sys)
 	sys.setdefaultencoding('utf8')
 except Exception:
     pass
 
+# Load environment variables from .env
+load_dotenv(dotenv_path="/home/jt/bitbucket/livestreamers/.env")
+twitch_auth = os.getenv("TWITCH_OAUTH")
+
 headers = {
     'Accept': 'application/vnd.twitchtv.v5+json',
     'Client-ID': 'dsv0rf69bvzgi9ch6ys16vwncjax1z',
-    'Authorization': 'OAuth bptxc05i4aujoe3thuhrq10icfmnua',
+    'Authorization': twitch_auth,
 }
 
 response = requests.get('https://api.twitch.tv/kraken/streams/followed', headers=headers)
