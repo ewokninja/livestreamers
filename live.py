@@ -14,6 +14,7 @@ except Exception:
     pass
 
 # Load environment variables from .env
+# The dotenv_path has to be declared absolutely in order to work with the setup I use.
 load_dotenv(dotenv_path="/home/jt/bitbucket/livestreamers/.env")
 twitch_auth = os.getenv("TWITCH_OAUTH")
 
