@@ -2,15 +2,19 @@
 A Python script that uses Twitch.tv API to check if a user's followed channels are live.
 
 ## Installation
-Clone ```git clone https://github.com/begs/livestreamers.git``` or [download](https://github.com/begs/livestreamers/archive/master.zip) the repository.
+Clone the repository.
+
+Create a file in the repo's directory called `.env` - it should contain the line:
+```export TWITCH_OAUTH="OAuth YOUR_TWITCH_OAUTH_KEY_HERE"```
+
+Alter the line:
+```load_dotenv(dotenv_path="/home/jt/bitbucket/livestreamers/.env")```
+So that it contains the absolute path to your .env file.
 
 ## Dependencies
-The script uses the 'requests' package in Python:  
-```pip install requests```
-or ```python -m pip install requests```
+This script uses the 'requests' package and the 'dotenv' package. 
+They can be installed with ```pip -r install requirements.txt```
 
 ## Usage
-Replace ```***``` in ```live.py``` with your Twitch.tv [OAuth](https://twitchapps.com/tmi/). You want the string *after* "oauth:". 
-
 Then simply run the ```live.py``` script. Example output:
 ![output](https://thumbs.gfycat.com/WatchfulTepidAdamsstaghornedbeetle-size_restricted.gif)
