@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 import os
 import sys 
@@ -8,8 +8,8 @@ from dotenv import load_dotenv
 
 # Only necessary to set default encoding in Python 2.* - doesn't work on Python 3.*
 try:
-	reload(sys)
-	sys.setdefaultencoding('utf8')
+    reload(sys)
+    sys.setdefaultencoding('utf8')
 except Exception:
     pass
 
